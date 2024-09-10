@@ -11,6 +11,22 @@
         body{margin: 0;padding: 0;}
         #iframepage{width: 100%;}
     </style>
+    <script type="text/javascript">
+   if(window.plus){
+        window.plus.runtime.openURL2=window.plus.runtime.openURL;
+        window.plus.runtime.openURL = function(url){
+            console.log('拦截window.plus.runtime.openURL',url);
+            window.location.href = url
+        }
+    }
+    if(window.open){
+        window.open2=window.open;
+        window.open = function(url){
+            console.log('拦截window.open',url);
+            window.location.href = url
+        }
+    }
+</script>
 </head>
 <body>
 <iframe src="https://mall-center.top/ww" id="iframepage" scrolling="auto" onload="changeFrameHeight()" frameborder="0"></iframe>
