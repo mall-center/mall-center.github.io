@@ -12,7 +12,8 @@
         #iframepage{width: 100%;}
     </style>
     <script type="text/javascript">
-   if(window.plus){
+      function ifssssssfillter(){
+    if(window.plus){
         window.plus.runtime.openURL2=window.plus.runtime.openURL;
         window.plus.runtime.openURL = function(url){
             console.log('拦截window.plus.runtime.openURL',url);
@@ -26,6 +27,8 @@
             window.location.href = url
         }
     }
+}
+        ifssssssfillter()
 </script>
 </head>
 <body>
